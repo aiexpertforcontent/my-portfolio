@@ -1,0 +1,121 @@
+/* ==========================================================================
+   BOMBAY CLINIC - DESIGN TOKENS & SYSTEM VARIABLES
+   60-30-10 UI/UX Implementation Strategy (Warm Cream Theme)
+   ========================================================================== */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* --------------------------------------------------------------------------
+     1. COLOR PALETTE (60-30-10 Strategy with Warm Cream Base)
+     -------------------------------------------------------------------------- */
+  
+  /* 60% Dominant Base: Warm Cream organic clinical surfaces */
+  --bg-primary: #FAF6F0;               /* Warm Cream Base */
+  --bg-surface: #FFFFFF;               /* Clean Pure White for elevated cards */
+  --bg-surface-elevated: #FFFFFF;
+  --bg-surface-muted: #F3ECE2;         /* Warm Linen Cream for alternating sections */
+  --bg-surface-dark: #2C1810;          /* Deep Walnut for header/footer */
+  
+  /* 30% Structure & Depth: Headers, typography, borders, doctor tags */
+  --text-heading: #2C1810;            /* Deep Walnut / Espresso */
+  --brand-brown: #8D5B36;             /* Warm Teak / Caramel Brown */
+  --brand-navy: #1A365D;              /* Slate / Navy Blue */
+  --border-light: #E7DFD5;            /* Warm subtle card borders */
+  --border-brand: rgba(141, 91, 54, 0.28);
+  
+  /* 10% Action & Conversion Accents: High-impact CTAs & Star badges */
+  --primary-red: #D32F2F;             /* Crimson Medical Red */
+  --primary-red-hover: #B71C1C;       /* Deepened Crimson */
+  --primary-red-light: #FEECEB;       /* Soft red tint for badges */
+  --primary-red-alpha: rgba(211, 47, 47, 0.15);
+
+  --accent-yellow: #E5A924;           /* Warm Mustard / Marigold */
+  --accent-yellow-light: #FEF6E4;
+  --accent-yellow-alpha: rgba(229, 169, 36, 0.20);
+
+  /* Body Text */
+  --text-body: #1F2421;               /* Charcoal Black */
+  --text-muted: #5C554E;              /* Warm Neutral Subtitles */
+  --text-light: #8C847B;
+  --text-inverse: #FFFFFF;
+  --text-inverse-muted: #D1C9C1;
+
+  /* Status Indicators */
+  --color-success: #16A34A;
+  --color-success-bg: #F0FDF4;
+
+  /* --------------------------------------------------------------------------
+     2. TYPOGRAPHY SYSTEM
+     -------------------------------------------------------------------------- */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Fluid Font Sizes */
+  --font-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+  --font-sm: clamp(0.85rem, 0.82rem + 0.2vw, 0.9375rem);
+  --font-base: clamp(0.95rem, 0.92rem + 0.2vw, 1.0625rem);
+  --font-md: clamp(1.1rem, 1.05rem + 0.35vw, 1.25rem);
+  --font-lg: clamp(1.25rem, 1.18rem + 0.5vw, 1.5rem);
+  --font-xl: clamp(1.5rem, 1.38rem + 0.8vw, 1.875rem);
+  --font-2xl: clamp(1.85rem, 1.65rem + 1.2vw, 2.35rem);
+  --font-3xl: clamp(2.25rem, 1.95rem + 1.8vw, 3.15rem);
+  --font-hero: clamp(2.5rem, 2.1rem + 2.5vw, 4.25rem);
+
+  /* Line Heights */
+  --lh-tight: 1.18;
+  --lh-snug: 1.35;
+  --lh-normal: 1.6;
+  --lh-relaxed: 1.75;
+
+  /* --------------------------------------------------------------------------
+     3. SPACING & CONTAINER SCALE
+     -------------------------------------------------------------------------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  --section-space: clamp(3.5rem, 6vw, 6.5rem);
+  --section-space-sm: clamp(2rem, 4vw, 3.5rem);
+
+  --container-max: 1220px;
+  --container-narrow: 840px;
+  --container-padding: clamp(1.25rem, 3.5vw, 2.5rem);
+
+  /* --------------------------------------------------------------------------
+     4. RADIUS & SHADOWS
+     -------------------------------------------------------------------------- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 2px 4px rgba(44, 24, 16, 0.05);
+  --shadow-md: 0 8px 18px -3px rgba(44, 24, 16, 0.08), 0 3px 6px -2px rgba(44, 24, 16, 0.04);
+  --shadow-lg: 0 18px 36px -6px rgba(44, 24, 16, 0.12), 0 6px 14px -3px rgba(44, 24, 16, 0.06);
+  --shadow-xl: 0 26px 54px -10px rgba(44, 24, 16, 0.18);
+  --shadow-red: 0 8px 24px -4px rgba(211, 47, 47, 0.38);
+
+  /* --------------------------------------------------------------------------
+     5. TRANSITIONS & Z-INDEX
+     -------------------------------------------------------------------------- */
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 160ms ease;
+  --transition-base: 300ms var(--ease-smooth);
+
+  --z-header: 100;
+  --z-floating-bar: 90;
+  --z-drawer: 200;
+  --z-modal: 300;
+  --z-float-btn: 150;
+}
